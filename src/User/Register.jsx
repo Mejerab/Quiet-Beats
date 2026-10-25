@@ -337,7 +337,7 @@ const Register = () => {
                 followCursor={false}
                 maxY={3}
             />
-            <div className="absolute top-1/2 -translate-1/2 left-1/2 w-1/3 h-4/5 bg-transparent backdrop-blur-3xl rounded-2xl text-center flex flex-col justify-center">
+            <div className="absolute lg:top-1/2 lg:-translate-1/2 lg:left-1/2 lg:w-1/3 h-4/5 bg-transparent backdrop-blur-3xl rounded-2xl text-center flex flex-col justify-center w-[93%]">
                 <PointHook small={true} title={step === 3 ? 'Enter Your Password' : step === 2 ? 'Enter Your OTP' : 'Register'} />
                 {step === 2 && <p className="text-lg text-[#49DC67] mt-3">Enter otp that you received on your email.</p>}
                 {step === 2 ?
@@ -373,15 +373,15 @@ const Register = () => {
                             <button className="cursor-pointer btn w-[60%] h-[45px] bg-[#121212] text-[#121212] hover:text-[#49DC67] border-0 overflow-hidden font-bold text-base rounded button-ani relative mx-auto"><span className="z-10">Submit</span></button>
                         </form> : <>
                             <form onSubmit={handleSubmit(onSubmit, onError)} className="mt-5 space-y-4 w-full">
-                                <input name="name" {...register('name', { required: 'Name is not valid' })} placeholder="Artist Name" type="text" className="input rounded text-white bg-transparent placeholder:text-[#ffffff99] focus:border-[#49DC67] py-6 backdrop-blur-2xl focus:outline-0 border-[#49DC6766]" />
-                                <input name="email" {...register('email', { required: 'Email Address is not valid' })} placeholder="Email Address" type="email" className="input rounded text-white bg-transparent placeholder:text-[#ffffff99] focus:border-[#49DC67] py-6 backdrop-blur-2xl focus:outline-0 border-[#49DC6766]" />
+                                <input name="name" {...register('name', { required: 'Name is not valid' })} placeholder="Artist Name" type="text" className="text-white input rounded bg-transparent placeholder:text-[#ffffff99] focus:border-[#49DC67] py-6 backdrop-blur-2xl focus:outline-0 border-[#49DC6766]" />
+                                <input name="email" {...register('email', { required: 'Email Address is not valid' })} placeholder="Email Address" type="email" className="text-white input rounded bg-transparent placeholder:text-[#ffffff99] focus:border-[#49DC67] py-6 backdrop-blur-2xl focus:outline-0 border-[#49DC6766]" />
                                 {user ? <button disabled className="cursor-pointer btn w-[60%] h-[45px] bg-[#121212] text-[#121212] hover:text-[#49DC67] border-0 overflow-hidden font-bold text-base rounded button-ani relative"><span className="z-10">Register</span></button> :
                                     <button className="cursor-pointer btn w-[60%] h-[45px] bg-[#121212] text-[#121212] hover:text-[#49DC67] border-0 overflow-hidden font-bold text-base rounded button-ani relative"><span className="z-10">Register</span></button>}
                             </form>
                             <p className="mt-4">Already have an account ? <Link to='/login' className="prime hover:underline cursor-pointer">Login</Link></p>
-                            <div className="w-[60%] mt-4 mx-auto space-y-4">
-                                <button onClick={handleGoogle} className="btn bg-transparent border-[#ffffff66] hover:border-white transition-colors relative py-6 font-bold w-full rounded-full border flex items-center gap-x-4"><FcGoogle className="text-2xl ml-3 absolute top-3 left-3" />Continue with Google</button>
-                                <button onClick={handleFacebook} className="btn bg-transparent border-[#ffffff66] hover:border-white transition-colors relative py-6 font-bold w-full rounded-full border flex items-center gap-x-4"><FaFacebookF className="text-2xl ml-3 absolute top-3 left-3 text-[#1877F2]" />Continue with Facebook</button>
+                            <div className="w-[70%] lg:w-[60%] mt-4 mx-auto space-y-4">
+                                <button onClick={handleGoogle} className="btn bg-transparent border-[#ffffff66] hover:border-white transition-colors relative py-6 font-bold w-full rounded-full border flex items-center gap-x-4"><FcGoogle className="text-2xl ml-3 absolute top-3 left-1 lg:left-3" />Continue with Google</button>
+                                <button onClick={handleFacebook} className="btn bg-transparent border-[#ffffff66] hover:border-white transition-colors relative py-6 font-bold w-full rounded-full border flex items-center gap-x-4"><FaFacebookF className="text-2xl ml-3 absolute top-3 left-0 lg:left-3 text-[#1877F2]" />Continue with Facebook</button>
                             </div>
                         </>
                 }

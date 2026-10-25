@@ -360,7 +360,7 @@ const Login = () => {
                 followCursor={false}
                 maxY={3}
             />
-            <div className="absolute top-1/2 -translate-1/2 left-1/2 w-1/3 h-4/5 bg-transparent backdrop-blur-3xl rounded-2xl text-center flex flex-col justify-center">
+            <div className="absolute lg:top-1/2 lg:-translate-1/2 lg:left-1/2 lg:w-1/3 h-4/5 bg-transparent backdrop-blur-3xl rounded-2xl text-center flex flex-col justify-center p-6">
                 <PointHook title={'Login'} />
                 {step === 2 ? <p className="text-lg text-[#49DC67] mt-3">Enter otp that you received on your email.</p>: step === 3? 'Enter Your Password' : ''}
                 {step === 2 ?
@@ -396,13 +396,13 @@ const Login = () => {
                         :
                         <form onSubmit={handleSubmit(onSubmit, onError)} className="mt-5 space-y-4 w-full">
                             <input {...register('email', { required: 'Email is required.' })} placeholder="Email Address" type="email" className="text-white input rounded bg-transparent placeholder:text-[#ffffff99] focus:border-[#49DC67] py-6 backdrop-blur-2xl focus:outline-0 border-[#49DC6766]" />
-                            <button className="cursor-pointer btn w-[60%] h-[45px] bg-[#121212] text-[#121212] hover:text-[#49DC67] border-0 overflow-hidden font-bold text-base rounded button-ani relative"><span className="z-10">Login</span></button>
+                            <button className="cursor-pointer btn w-[60%] h-11.25 bg-[#121212] text-[#121212] hover:text-[#49DC67] border-0 overflow-hidden font-bold text-base rounded button-ani relative"><span className="z-10">Login</span></button>
                         </form>
                 }
                 <p className="mt-4">Don't have an account ? <Link to='/register' className="prime hover:underline cursor-pointer">Register Now</Link></p>
-                <div className="w-[60%] mt-4 mx-auto space-y-4">
-                    <button onClick={handleGoogle} className="btn bg-transparent border-[#ffffff66] hover:border-white transition-colors relative py-6 font-bold w-full rounded-full border flex items-center gap-x-4"><FcGoogle className="text-2xl ml-3 absolute top-3 left-3" />Continue with Google</button>
-                    <button onClick={handleFacebook} className="btn bg-transparent border-[#ffffff66] hover:border-white transition-colors relative py-6 font-bold w-full rounded-full border flex items-center gap-x-4"><FaFacebookF className="text-2xl ml-3 absolute top-3 left-3 text-[#1877F2]" />Continue with Facebook</button>
+                <div className="w-[80%] lg:w-[60%] mt-4 mx-auto space-y-4">
+                    <button onClick={handleGoogle} className="btn bg-transparent border-[#ffffff66] hover:border-white transition-colors relative py-6 font-bold w-full rounded-full border flex items-center gap-x-4"><FcGoogle className="text-2xl ml-3 absolute top-3 left-px lg:left-3" />Continue with Google</button>
+                    <button onClick={handleFacebook} className="btn bg-transparent border-[#ffffff66] hover:border-white transition-colors relative py-6 font-bold w-full rounded-full border flex items-center gap-x-4"><FaFacebookF className="text-2xl ml-3 absolute top-3 -left-1 lg:left-3 text-[#1877F2]" />Continue with Facebook</button>
                 </div>
             </div>
         </div>
