@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Chewy&family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900');
+@import "tailwindcss";
+@import "@heroui/styles";
+@plugin "daisyui";
+
+
+@theme {
+  --breakpoint-xs: 375px;
+}
+
+.font {
+    font-family: "Comfortaa", sans-serif;
+}
+
+.tra {
+    transition: all .3s ease-out;
+}
+
+.font2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.prime {
+    color: #49DC67;
+}
+
+.bg-prime {
+    background-color: #49DC67;
+}
+
+.para {
+    color: #FFFFFF66;
+    font-family: "Montserrat", sans-serif;
+}
+
+.under::after {
+    content: '';
+    position: absolute;
+    top: 101%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #49DC67;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+
+.under:hover::after {
+    width: 100%;
+}
+
+.button-ani::after {
+    content: '';
+    position: absolute;
+    border-radius: 4px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease-in-out;
+    background-color: #49DC67;
+}
+
+.button-ani:hover::after {
+    top: 102%;
+}
+
+.swalButton {
+    background: #49DC67;
+    color: #fff;
+    transition: .4s;
+}
+
+.swalButton:hover {
+    background-color: #49DC67c9;
+}
+
+.swal2-success-circular-line-left,
+.swal2-success-fix,
+.swal2-success-circular-line-right {
+    background: transparent !important;
+}
+
+/* Bigger */
+.css-13vpke-MuiSlider-root {
+    color: #49DC67 !important;
+    height: 4px !important;
+}
+
+.css-13vpke-MuiSlider-root:hover .MuiSlider-thumb {
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.css-13vpke-MuiSlider-root .MuiSlider-thumb {
+    width: 14px !important;
+    height: 14px !important;
+}
+
+/* Smaller */
+.css-hgkhyn-MuiSlider-root {
+    color: #49DC67 !important;
+    height: 3px !important;
+}
+
+.MuiSlider-thumb {
+    transition: opacity .1s ease !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    /* optional – stops smooth glow transitions */
+}
+
+/* Remove hover glow */
+.css-hgkhyn-MuiSlider-root:hover .MuiSlider-thumb {
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Remove focus (keyboard/tab) glow */
+.MuiSlider-thumb.Mui-focusVisible {
+    box-shadow: none !important;
+}
+
+/* Remove active (when dragging) glow */
+.MuiSlider-thumb.Mui-active {
+    box-shadow: none !important;
+}
+
+.mother:hover .child{
+    opacity: 1;
+    visibility: visible;
+}
