@@ -7,7 +7,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 import DashContent from "../Dashboard/DashContent";
 import AddSong from "../Dashboard/AddSong";
-import Playlists from "../Dashboard/Playlist/Playlists";
+import Playlists from "../Dashboard/playlist/Playlists";
 import PlayAccess from "../Dashboard/playlist/PlayAccess";
 import SongDetails from "../Dashboard/SongDetails";
 import Favourites from "../Dashboard/playlist/Favourites";
