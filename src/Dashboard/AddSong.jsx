@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router";
-import useHostingUrl from "../../../unoo-chats/src/hooks/useHostingUrl";
 import { useState } from "react";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import UserHook from "../hooks/UserHook";
@@ -10,6 +9,7 @@ import PhotoUploader from "../hooks/PhotoUploader";
 import Uploader from "../hooks/UploadHook";
 import Select from 'react-select'
 import DashHeader from "./DashHeader/DashHeader";
+import useHostingUrl from '../hooks/useImageHost'
 
 const AddSong = () => {
     const navigate = useNavigate();
